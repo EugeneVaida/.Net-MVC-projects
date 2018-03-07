@@ -1,0 +1,11 @@
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\Domain.dll.config
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\Domain.dll
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\Domain.pdb
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\EntityFramework.dll
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\EntityFramework.xml
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\obj\Debug\Domain.dll
+C:\Users\Евгений\Desktop\Warehouse\StoreSolution\Domain\obj\Debug\Domain.pdb

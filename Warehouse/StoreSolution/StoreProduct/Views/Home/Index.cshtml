@@ -1,0 +1,30 @@
+﻿@using Domain.UnitRepository
+@model IEnumerable<Store>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="container">
+	<h1>Магазины</h1>
+</div>
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Название</th>
+				<th>Адрес</th>
+				<th>Время работы</th>
+				<th>Товары</th>
+			</tr>
+		</thead>
+		@foreach (var x in Model)
+		{
+			<tr>
+				<td>@x.StoreName</td>
+				<td>@x.Address</td>
+				<td>@x.WorkTime</td>
+				<td><a href="~/Product/ShowProducts/@x.StoreName">Показать</a></td>
+			</tr>
+		}
+		
+	</table>
+</div>
