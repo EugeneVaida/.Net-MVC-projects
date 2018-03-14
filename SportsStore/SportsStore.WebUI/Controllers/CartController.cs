@@ -20,10 +20,10 @@ namespace SportsStore.WebUI.Controllers
 
         public ViewResult Index(Cart cart, string returnUrl)
         {
-            return View( new CartIndexViewModel { Cart = cart });
+            return View( new CartIndexViewModel { ReturnUrl = returnUrl, Cart = cart });
         }
 
-        public RedirectToRouteResult AddToCart(Cart cart,int productId, string returnUrl)
+        public RedirectToRouteResult AddToCart(Cart cart, int productId, string returnUrl)
         {
             Product product = repository.Products.FirstOrDefault(p => p.ProductID == productId);
 
@@ -54,6 +54,16 @@ namespace SportsStore.WebUI.Controllers
                 Session["Cart"] = cart;
             }
             return cart;
+        }
+
+        public PartialViewResult Summary(Cart cart)
+        {
+            return PartialView(cart);
+        }
+
+        public ViewResult Checkout()
+        {
+            return View(new ShippingDetails());
         }
     }
 }

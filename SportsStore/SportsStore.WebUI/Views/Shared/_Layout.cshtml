@@ -18,15 +18,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("SportsStore", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
-                </ul>
-            </div>
+            </div>   
+            @Html.Action("Summary", "Cart");
         </div>
+       
     </div>
 	<div class="row panel">
 		<div id="categories" class="col-xs-3">
