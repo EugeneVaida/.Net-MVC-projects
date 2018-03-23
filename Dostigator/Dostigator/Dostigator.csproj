@@ -166,6 +166,10 @@
     <Compile Include="Provider\CustomRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DostigatorDb.mdf" />
+    <Content Include="App_Data\DostigatorDb_log.ldf">
+      <DependentUpon>DostigatorDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
     <Content Include="Content\style.css" />
@@ -213,9 +217,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\Profile_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
