@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Profile_Layout";
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav>
+    <div class="nav-wrapper grey darken-3">
+        <a href="#!" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="">Материалы</a></li>
+            <li><a href="">Лента</a></li>
+            <li><a href="">Группы</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="">Материалы</a></li>
+    <li><a href="">Лента</a></li>
+    <li><a href="">Группы</a></li>    
+</ul>
+
+
+
+
+
+
+@RenderBody()
+
+
+
+<footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+        <div class="container">
+            Made by Eugene Vaida
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
