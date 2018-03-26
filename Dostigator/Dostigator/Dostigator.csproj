@@ -152,6 +152,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AimController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Global.asax.cs">
@@ -166,9 +167,14 @@
     <Compile Include="Provider\CustomRoleProvider.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\DostigatorDb.mdf" />
+    <Content Include="App_Data\DostigatorDb_log.ldf">
+      <DependentUpon>DostigatorDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\TimeLine.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -212,10 +218,11 @@
     <Content Include="Views\Account\Logoff.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Shared\Profile_Layout.cshtml" />
+    <Content Include="Views\Aim\Create.cshtml" />
+    <Content Include="Views\Shared\_TimeLine.cshtml" />
+    <Content Include="Views\Profile\Aims.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>

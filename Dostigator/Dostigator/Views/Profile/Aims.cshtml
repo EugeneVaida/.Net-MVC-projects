@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Aims";
+}
+
+@{
+    Layout = "~/Views/Shared/Profile_Layout.cshtml";
+}
+@model Dostigator.Models.User
+
+
+
+
+
+
+<div class="container">
+    <section>
+        <div class="row-center">
+            <h2>Мои цели</h2>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col l12 m12 s12">
+                <div class="row">
+                    @foreach (var x in ViewBag.Aims)
+                    {
+                        <div class="col s12 m6 l4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="@x.Img">
+                                    <span class="card-title">@x.Name<br> <span class="new badge" data-badge-caption="@x.Group"></span> </span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <p>@x.Text</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

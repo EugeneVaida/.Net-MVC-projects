@@ -6,40 +6,12 @@
 @{
     Layout = "~/Views/Shared/Profile_Layout.cshtml";
 }
+@model Dostigator.Models.User
 
 
 
 
 
-<div class="container">
-    <section>
-        <ul id="slide-out" class="sidenav">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img src="https://drscdn.500px.org/photo/177823087/w%3D440_h%3D440/v2?webp=true&v=7&sig=9f050ea7d86827347c212238c04f24d9ea34d94d335f7f33614c5b0e2a33b3b9">
-                    </div>
-
-                    @foreach (var x in ViewBag.Hello)
-                    {
-                        <a href="#user"><img class="circle" src="https://drscdn.500px.org/photo/195143459/h%3D1065/v2?webp=true&sig=c9db37fe0017a0479f01bb2a010c88ef4748bcb3a9ef4c58494c20a3fd945fc6"></a>
-                        <a href="#name"><span class="white-text name">@x.Email</span></a>
-                        <a href="#email"><span class="white-text email">@x.Email/gmail.com</span></a>
-                    }
-
-                </div>
-            </li>            
-            <li><a href="#!" class="waves-effect">Мои цели</a></li>
-            <li><a href="#!" class="waves-effect">Таймлайн</a></li>
-            <li><a href="#!" class="waves-effect">Вызовы</a></li>
-            <li><div class="divider"></div></li>
-            <li><a class="subheader">Subheader</a></li>
-            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-        </ul>
-        
-        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="medium material-icons">menu</i></a>
-    </section>
-</div>
 
 <div class="container">
 	<section>
@@ -51,61 +23,26 @@
 		<div class="row">
 			<div class="col l12 m12 s12">
 				<div class="row">
-					<div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="http://zirochka.ua/assets/cache/images/4e78b635c6257b4b2eb0f84016b56ab6.jpg">
-                                <span class="card-title"> Текущая цель <br> <span class="new badge" data-badge-caption="Группа"></span> </span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p>Описание цели</p>
-                            </div>
-                        </div>
-					</div>
-                    <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="http://zirochka.ua/assets/cache/images/4e78b635c6257b4b2eb0f84016b56ab6.jpg">
-                                <span class="card-title"> Текущая цель <br> <span class="new badge" data-badge-caption="Группа"></span> </span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p>Описание цели</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="http://zirochka.ua/assets/cache/images/4e78b635c6257b4b2eb0f84016b56ab6.jpg">
-                                <span class="card-title"> Текущая цель <br> <span class="new badge" data-badge-caption="Группа"></span> </span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p>Описание цели</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="http://zirochka.ua/assets/cache/images/4e78b635c6257b4b2eb0f84016b56ab6.jpg">
-                                <span class="card-title"> Текущая цель <br> <span class="new badge" data-badge-caption="Группа"></span> </span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p>Описание цели</p>
-                            </div>
-                        </div>
-                    </div>
+					@foreach (var x in ViewBag.Aims)
+					{
+						<div class="col s12 m6 l4">
+							<div class="card">
+								<div class="card-image">
+									<img src="@x.Img">
+									<span class="card-title">@x.Name<br> <span class="new badge" data-badge-caption="@x.Group"></span> </span>
+									<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
+								</div>
+								<div class="card-content">
+									<p>@x.Text</p>
+								</div>
+							</div>
+						</div>
+					}
+
+					                  
 					
 				</div>
-			</div>
-			<div class="col l4 m4 s12">
-
-
-			</div>
+			</div>			
 		</div>
 	</section>
 </div>

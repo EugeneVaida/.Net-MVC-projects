@@ -27,7 +27,8 @@ namespace Dostigator
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/style.css",
                       "~/Content/materialize.css",
-                      "~/Content/materialize.min.css"));
+                      "~/Content/materialize.min.css",
+                      "~/Content/TimeLine.css"));
         }
     }
 }
