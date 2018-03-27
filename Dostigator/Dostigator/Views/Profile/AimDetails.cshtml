@@ -1,0 +1,54 @@
+﻿@model Dostigator.Models.Aim
+@{
+    ViewBag.Title = "AimDetails";
+    Layout = "~/Views/Shared/Profile_Layout.cshtml";
+}
+
+<h2>AimDetails</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="container col s12 ">
+            <div class="row">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">О цели<i class="material-icons right">more_vert</i></span>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col s12 m12 l12">
+                                    <div class="card">
+                                        <div class="card-image">
+                                            <img src="@Html.DisplayFor(model => model.Img)">
+                                            <span class="card-title">@Html.DisplayFor(model => model.Name)</span>
+                                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">create</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s10 m10 l10">
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="col s2 m2 l2">
+                                    <p>70%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <h5>Описание</h5>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
+                        </div>
+
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">О цели<i class="material-icons right">close</i></span>
+                        <p>@Html.DisplayFor(model => model.Text)</p>
+                        <p>@Html.DisplayFor(model => model.Date)</p>
+                        <p>@Html.DisplayFor(model => model.Group)</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

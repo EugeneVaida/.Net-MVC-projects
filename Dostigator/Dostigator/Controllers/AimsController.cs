@@ -36,11 +36,26 @@ namespace Dostigator.Controllers
             return View(aim);
         }
 
+        
         // GET: Aims/Create
         public ActionResult Create()
         {
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Email");
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                User user = null;
+                using (UserContext db = new UserContext())
+                {
+                    user = db.Users.Where(x => x.Email.Contains(User.Identity.Name)).FirstOrDefault();
+                }
+
+                ViewBag.UserId = user.Id;
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
         }
 
         // POST: Aims/Create
@@ -52,9 +67,16 @@ namespace Dostigator.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Aims.Add(aim);
+                /*User user = null;
+                using (UserContext db = new UserContext())
+                {
+                    user = db.Users.Where(x => x.Email.Contains(User.Identity.Name)).FirstOrDefault();
+                }
+
+                aim.UserId = user.Id;*/
+                db.Aims.Add(aim);                
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Profile");
             }
 
             ViewBag.UserId = new SelectList(db.Users, "Id", "Email", aim.UserId);

@@ -227,6 +227,10 @@
     <Content Include="Views\Aims\Details.cshtml" />
     <Content Include="Views\Aims\Edit.cshtml" />
     <Content Include="Views\Aims\Index.cshtml" />
+    <Content Include="Views\Profile\CreateAim.cshtml" />
+    <Content Include="Views\Profile\EditAim.cshtml" />
+    <Content Include="Views\Profile\AimDetails.cshtml" />
+    <Content Include="Views\Profile\DeleteAim.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
