@@ -1,0 +1,21 @@
+<form class="emp-form" #employeeForm="ngForm" >
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="FirstName" #FirstName="ngModel" [(ngModel)]="employeeService.SelectedEmployee.FirstName" >
+    </div>     
+    <div class="form-group col-md-6">
+      <input class="form-control" name="LastName" #LastName="ngModel" [(ngModel)]="employeeService.SelectedEmployee.LastName" >
+    </div>       
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="Position" #Position="ngModel" [(ngModel)]="employeeService.SelectedEmployee.Position" >
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="EmpCode" #EmpCode="ngModel" [(ngModel)]="employeeService.SelectedEmployee.EmpCode" >
+    </div>     
+    <div class="form-group col-md-6">
+      <input class="form-control" name="Office" #Office="ngModel" [(ngModel)]="employeeService.SelectedEmployee.Office" >
+    </div>       
+  </div>
+</form>
