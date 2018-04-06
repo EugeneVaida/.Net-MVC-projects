@@ -22,10 +22,7 @@ namespace Dostigator.Controllers
                 using (UserContext db = new UserContext())
                 {
                     user = db.Users.Where(x => x.Email.Contains(User.Identity.Name)).FirstOrDefault();
-<<<<<<< HEAD
-                    
-=======
->>>>>>> 98f8894ca9ce0172136a7ac37994e2b1b02f56fc
+
                 }
 
                 IEnumerable<Aim> aim = null;

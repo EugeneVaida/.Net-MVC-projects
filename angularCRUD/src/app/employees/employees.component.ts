@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-import {EpmployeeService} from './shared/epmployee.service';
+import { EmployeeService } from './shared/epmployee.service';
 
 @Component({
   selector: 'app-employees',
   templateUrl: './employees.component.html',
   styleUrls: ['./employees.component.css'],
-  providers:[EpmployeeService]
+  providers:[EmployeeService]
 })
 export class EmployeesComponent implements OnInit {
 
-  constructor(private employeeService : EpmployeeService) { }
+  constructor(private employeeService : EmployeeService) { }
 
   ngOnInit() {
   }

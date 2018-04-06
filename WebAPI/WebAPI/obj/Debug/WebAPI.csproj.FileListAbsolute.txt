@@ -61,3 +61,6 @@ F:\Git\angular_begining\WebAPI\WebAPI\obj\Debug\WebAPI.csprojResolveAssemblyRefe
 F:\Git\angular_begining\WebAPI\WebAPI\obj\Debug\WebAPI.csproj.CoreCompileInputs.cache
 F:\Git\angular_begining\WebAPI\WebAPI\obj\Debug\WebAPI.dll
 F:\Git\angular_begining\WebAPI\WebAPI\obj\Debug\WebAPI.pdb
+F:\Git\angular_begining\WebAPI\WebAPI\bin\System.Web.Cors.dll
+F:\Git\angular_begining\WebAPI\WebAPI\bin\System.Web.Http.Cors.dll
+F:\Git\angular_begining\WebAPI\WebAPI\bin\System.Web.Http.Cors.xml

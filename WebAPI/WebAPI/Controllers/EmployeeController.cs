@@ -9,9 +9,12 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using WebAPI.Models;
+using System.Web.Http.Cors;
 
 namespace WebAPI.Controllers
 {
+
+    //[EnableCors(origins: "http://localhost:4200/", headers:"*",methods:"*")]
     public class EmployeeController : ApiController
     {
         private DBModel db = new DBModel();
