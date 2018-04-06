@@ -27,7 +27,7 @@ namespace Dostigator.Controllers
                     user = db.Users.Where(x => x.Email.Contains(User.Identity.Name)).FirstOrDefault();
                 }
 
-                Aim aim = new Aim { Name = model.Name, Text = model.Text, Date = model.Date, Img = model.Img, Group = model.Group, UserId = user.Id  };
+                Aim aim = new Aim { Name = model.Name, Text = model.Text, FinishDate = model.FinishDate, Img = model.Img, Group = model.Group, UserId = user.Id  };
                 // создаем нового пользователя
                 using (UserContext db = new UserContext())
                 {

@@ -22,7 +22,8 @@ namespace Dostigator
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/init.js",
                       "~/Scripts/materialize.js",
-                      "~/Scripts/materialize.min.js"));
+                      "~/Scripts/materialize.min.js,",
+                      "~/Scripts/ckeditor.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/style.css",

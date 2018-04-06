@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/Profile_Layout.cshtml";
 }
 
+
+
 <h2>AimDetails</h2>
 
 <div class="container">
@@ -18,9 +20,9 @@
                                 <div class="col s12 m12 l12">
                                     <div class="card">
                                         <div class="card-image">
-                                            <img src="@Html.DisplayFor(model => model.Img)">
-                                            <span class="card-title">@Html.DisplayFor(model => model.Name)</span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">create</i></a>
+                                            @Html.Raw("<img src=\"data:image/jpeg;base64,"
+                                + Convert.ToBase64String(Model.Img) + "\" />")
+                                            <span class="card-title">@Html.DisplayFor(model => model.Name)</span>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -37,15 +39,16 @@
                         <div class="container">
                             <h5>Описание</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?</p>
+                            <a class="waves-effect waves-teal btn-flat" href="~/Profile/DeleteAim/@Model.Id">Удалить</a>
+                            <a class="waves-effect waves-teal btn-flat" href="~/Profile/EditAim/@Model.Id">Редактировать</a>
                         </div>
 
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">О цели<i class="material-icons right">close</i></span>
                         <p>@Html.DisplayFor(model => model.Text)</p>
-                        <p>@Html.DisplayFor(model => model.Date)</p>
+                        <p>@Html.DisplayFor(model => model.FinishDate)</p>
                         <p>@Html.DisplayFor(model => model.Group)</p>
-
                     </div>
                 </div>
             </div>

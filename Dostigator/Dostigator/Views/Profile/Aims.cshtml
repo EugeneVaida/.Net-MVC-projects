@@ -27,19 +27,20 @@
                         <div class="col s12 m6 l4">
                             <div class="card">
                                 <div class="card-image">
-                                    <img src="@x.Img">
+                                    @Html.Raw("<img src=\"data:image/jpeg;base64,"
+                                + Convert.ToBase64String(x.Img) + "\" />")
                                     <span class="card-title">@x.Name<br> <span class="new badge" data-badge-caption="@x.Group"></span> </span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red" href="~/Profile/AimDetails/@x.Id"><i class="material-icons">chevron_right</i></a>
                                 </div>
                                 <div class="card-content">
                                     <p>@x.Text</p>
+                                    <p>@x.StartDate - @x.FinishDate</p>
+                                    <a class="waves-effect waves-light btn-small" href="~/Profile/DeleteAim/@x.Id"><i class="material-icons right">close</i>Удалить</a>
+                                    <a class="waves-effect waves-light btn-small" href="~/Profile/EditAim/@x.Id"><i class="material-icons right">create</i>Изменить</a>
                                 </div>
                             </div>
                         </div>
                     }
-
-
-
                 </div>
             </div>
         </div>

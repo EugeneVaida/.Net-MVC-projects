@@ -59,6 +59,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -153,14 +156,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AimController.cs" />
+    <Compile Include="Controllers\AimsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\TimeLinesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Aim.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Models.cs" />
+    <Compile Include="Models\TimeLine.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,6 +191,7 @@
     <Content Include="img\background2.jpg" />
     <Content Include="img\background3.jpg" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\ckeditor.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -221,8 +228,25 @@
     <Content Include="Views\Aim\Create.cshtml" />
     <Content Include="Views\Shared\_TimeLine.cshtml" />
     <Content Include="Views\Profile\Aims.cshtml" />
+    <Content Include="Views\Aims\Create.cshtml" />
+    <Content Include="Views\Aims\Delete.cshtml" />
+    <Content Include="Views\Aims\Details.cshtml" />
+    <Content Include="Views\Aims\Edit.cshtml" />
+    <Content Include="Views\Aims\Index.cshtml" />
+    <Content Include="Views\Profile\CreateAim.cshtml" />
+    <Content Include="Views\Profile\EditAim.cshtml" />
+    <Content Include="Views\Profile\AimDetails.cshtml" />
+    <Content Include="Views\Profile\DeleteAim.cshtml" />
+    <Content Include="Views\TimeLines\Create.cshtml" />
+    <Content Include="Views\TimeLines\Delete.cshtml" />
+    <Content Include="Views\TimeLines\Details.cshtml" />
+    <Content Include="Views\TimeLines\Edit.cshtml" />
+    <Content Include="Views\TimeLines\Index.cshtml" />
+    <Content Include="Views\Profile\ProfileBar.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
